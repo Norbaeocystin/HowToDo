@@ -10,19 +10,19 @@ sudo apt--get install -y  mongodb
 ```
 To enable authentication and be able to connect remotely you need to do this steps:
 ```
-#start mongod
-sudo systemctl start mongod
+#start mongodb
+sudo systemctl start mongodb
 #start mongo
 mongo
 # create administrator
 db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } )
 exit
-#now open configuration file for mongod
-sudo nano /etc/mongod.conf
+#now open configuration file for mongodb
+sudo nano /etc/mongodb.conf
 #change bindIp: 127.0.0.1 to bindIp: 0.0.0.0
   bindIp: 0.0.0.0
 # change authentication by writing:
 security:
   authorization: enabled
 #restart mongod
-sudo systemctl restart mongod
+sudo systemctl restart mongodb

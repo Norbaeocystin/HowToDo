@@ -17,7 +17,7 @@ mongo
 # create administrator
 db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } )
 # create root
-db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "userAdminAnyDatabase", db: "root" } ] } )
+db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "root", db: "admin" } ] } )
 exit
 #now open configuration file for mongodb
 sudo nano /etc/mongodb.conf

@@ -20,11 +20,11 @@ db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "userAdminAnyD
 db.createUser( { user: "Admin", pwd: "password", roles: [ { role: "root", db: "admin" } ] } )
 exit
 #now open configuration file for mongodb
-sudo nano /etc/mongodb.conf
+sudo nano /etc/mongod.conf
 #change bindIp: 127.0.0.1 to bindIp: 0.0.0.0
   bindIp: 0.0.0.0
 # change authentication by writing:
 security:
   authorization: enabled
 #restart mongod
-sudo systemctl restart mongodb
+sudo systemctl restart mongod

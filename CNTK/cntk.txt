@@ -1,0 +1,4 @@
+#how to install cntk on ubuntu 18.04
+https://github.com/eddelbuettel/mkl4deb
+https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-linux
+https://docs.microsoft.com/en-us/cognitive-toolkit/setup-linux-python?tabs=cntkpy2

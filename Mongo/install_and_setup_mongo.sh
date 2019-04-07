@@ -11,3 +11,4 @@ function user_creation {
     $create_user
 EOF
 }
+sudo sh -c  'echo "security:\n  authorization: enabled">> mongod.conf'

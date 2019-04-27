@@ -9,3 +9,8 @@ for requirement in $requirements
 do
   install "$requirement"
 done
+wget https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+mv -f ~/chromedriver /usr/local/bin/chromedriver
+chown root:root /usr/local/bin/chromedriver
+chmod 0755 /usr/local/bin/chromedriver

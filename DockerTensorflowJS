@@ -7,9 +7,13 @@ apt-cache policy docker-ce
 apt install docker-ce
 
 
-$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list$ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit$ sudo systemctl restart docker
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
 #--gpus it can be all, list, int
-docker run --gpus 1 nvidia/cuda:9.0-base nvidia-smi
+docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
 #--gpus it can be all, list, int
 sudo docker run --name tf_gpu --gpus 1 -d tensorflow/tensorflow:latest-gpu /bin/bash
 #run in docker

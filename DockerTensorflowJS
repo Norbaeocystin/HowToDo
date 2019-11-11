@@ -15,7 +15,7 @@ sudo systemctl restart docker
 #--gpus it can be all, list, int
 docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
 #--gpus it can be all, list, int
-sudo docker run --name tf_gpu --gpus 1 -d tensorflow/tensorflow:latest-gpu /bin/bash
+sudo docker run --name tf_gpu --gpus all -p 8000:8888 -it tensorflow/tensorflow:latest-gpu /bin/bash
 #run in docker
 apt update
 apt install python3 python3-pip
@@ -32,3 +32,4 @@ apt update
 apt install yarn
 yarn add @tensorflow/tfjs-node-gpu
 jupyter lab --allow-root --port 8888 --ip=0.0.0.0
+#docker commit <container id> <image-name>:<version>

@@ -4,6 +4,7 @@ yes | apt install nodejs
 yes | apt install npm
 yes | apt install screen
 npm install express --save
+
 npm install puppeteer
 npm install puppeteer-extra
 npm install puppeteer-extra-plugin-stealth

@@ -1,0 +1,122 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%presto\nSELECT jobs, source, date FROM mongodb.trading.indeed WHERE source LIKE '%Agilent' ORDER BY date DESC LIMIT 20;",
+      "user": "anonymous",
+      "dateUpdated": "2020-04-10T11:55:11+0200",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300,
+              "optionOpen": true,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "reviews": "string",
+                      "jobs": "string",
+                      "work/life balance": "string",
+                      "compensation/benefits": "string",
+                      "job security/advancement": "string",
+                      "management": "string",
+                      "culture": "string",
+                      "date": "string",
+                      "source": "string",
+                      "twitter": "string",
+                      "facebook": "string",
+                      "instagram": "string",
+                      "youtube": "string",
+                      "website": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "rotate"
+                },
+                "pieChart": {}
+              },
+              "commonSetting": {},
+              "keys": [],
+              "groups": [
+                {
+                  "name": "date",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "jobs",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "jobs\tsource\tdate\n11\thttps://www.indeed.com/cmp/Agilent\t2020-04-10 00:02:01.786\n15\thttps://www.indeed.com/cmp/Agilent\t2020-04-09 12:02:01.656\n13\thttps://www.indeed.com/cmp/Agilent\t2020-04-09 00:02:02.358\n13\thttps://www.indeed.com/cmp/Agilent\t2020-04-08 12:02:01.731\n13\thttps://www.indeed.com/cmp/Agilent\t2020-04-08 00:02:02.488\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-07 12:02:02.133\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-07 00:02:02.058\n15\thttps://www.indeed.com/cmp/Agilent\t2020-04-06 12:02:02.057\n15\thttps://www.indeed.com/cmp/Agilent\t2020-04-06 00:02:02.290\n15\thttps://www.indeed.com/cmp/Agilent\t2020-04-05 12:02:01.849\n15\thttps://www.indeed.com/cmp/Agilent\t2020-04-05 00:02:02.227\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-04 12:02:02.290\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-04 00:02:01.656\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-03 12:02:02.390\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-03 00:02:01.590\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-02 12:02:01.776\n14\thttps://www.indeed.com/cmp/Agilent\t2020-04-02 00:02:01.747\n16\thttps://www.indeed.com/cmp/Agilent\t2020-04-01 12:02:01.827\n16\thttps://www.indeed.com/cmp/Agilent\t2020-04-01 00:02:01.612\n16\thttps://www.indeed.com/cmp/Agilent\t2020-03-31 12:02:02.417\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1586504879605_-1911375668",
+      "id": "paragraph_1586504879605_-1911375668",
+      "dateCreated": "2020-04-10T09:47:59+0200",
+      "dateStarted": "2020-04-10T11:54:49+0200",
+      "dateFinished": "2020-04-10T11:54:50+0200",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:66887"
+    }
+  ],
+  "name": "Presto",
+  "id": "2F791R13P",
+  "defaultInterpreterGroup": "presto",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Presto"
+}
